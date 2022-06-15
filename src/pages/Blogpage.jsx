@@ -13,6 +13,7 @@ export const Blogpage = () => {
     return (
         <div>
             <h1>This is Posts</h1>
+            <Link to="/posts/new">Add new post</Link>
             {
                 posts.map((item) => (
                     <Link key={item.id} to={`/posts/${item.id}`}>
