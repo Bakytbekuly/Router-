@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import { Aboutpage } from './pages/Aboutpage'
 import { Blogpage } from './pages/Blogpage'
 import { Homepage } from './pages/Homepage'
@@ -22,6 +22,7 @@ function App() {
             <Route path='posts/new' element={<Createpage />} />
             <Route path='posts/:id/edit' element={<Editpage />} />
             <Route path='about' element={<Aboutpage />} />
+            <Route path='about-us' element={<Navigate to="/about" replace />} />
             <Route path='*' element={<Notfoundpage />} />
           </Route>
         </Routes>

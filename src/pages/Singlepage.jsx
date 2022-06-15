@@ -13,6 +13,7 @@ export const Singlepage = () => {
     }, [id])
 
     const goBack = () => (navigate(-1))
+    const goHome = () => (navigate('/', { replace: true }))
 
     return (
         <div>
@@ -20,7 +21,9 @@ export const Singlepage = () => {
                 <>
                     <h1>{data.title}</h1>
                     <p>{data.body}</p>
-                    <button onClick={goBack}>Back</button>
+                    <button onClick={goBack}>Go Back</button>
+                    {/* Bad approach */}
+                    <button onClick={goHome}>Go Home</button>
                     <Link to={`/posts/${id}/edit`}>Edit Post</Link>
                 </>
             )}
