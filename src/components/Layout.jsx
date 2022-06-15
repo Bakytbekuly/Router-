@@ -1,15 +1,14 @@
-import { NavLink, Outlet } from 'react-router-dom'
-
-const setActive = ({ isActive }) => isActive ? "active-link" : "";
-
+import { Outlet } from 'react-router-dom'
+import { CustomLink } from "../pages/CustomTags/CustomLink"
 
 export const Layout = () => {
+    const val = ["kartow"]
     return (
         <div>
             <header>
-                <NavLink to="/" style={({ isActive }) => ({ color: isActive ? "var(--color-active)" : "white" })}>Home</NavLink>
-                <NavLink to="/posts" style={({ isActive }) => ({ color: isActive ? "var(--color-active)" : "white" })}>Blog</NavLink>
-                <NavLink to="/about" style={({ isActive }) => ({ color: isActive ? "var(--color-active)" : "white" })}>About</NavLink>
+                <CustomLink to="/" val={val}>Home</CustomLink>
+                <CustomLink to="/posts" >Blog</CustomLink>
+                <CustomLink to="/about" >About</CustomLink>
 
             </header>
             <main className="container">
