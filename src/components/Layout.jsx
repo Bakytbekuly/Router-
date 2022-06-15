@@ -7,9 +7,9 @@ export const Layout = () => {
     return (
         <div>
             <header>
-                <NavLink to="/" className={setActive}>Home</NavLink>
-                <NavLink to="/posts" className={setActive}>Blog</NavLink>
-                <NavLink to="/about" className={setActive}>About</NavLink>
+                <NavLink to="/" style={({ isActive }) => ({ color: isActive ? "var(--color-active)" : "white" })}>Home</NavLink>
+                <NavLink to="/posts" style={({ isActive }) => ({ color: isActive ? "var(--color-active)" : "white" })}>Blog</NavLink>
+                <NavLink to="/about" style={({ isActive }) => ({ color: isActive ? "var(--color-active)" : "white" })}>About</NavLink>
 
             </header>
             <main className="container">
