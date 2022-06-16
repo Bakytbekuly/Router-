@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Link, Routes } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 
 export const Aboutpage = () => {
     return (
@@ -9,11 +9,12 @@ export const Aboutpage = () => {
                 <li><Link to="contacts">Contacts</Link></li>
                 <li><Link to="team">Team</Link></li>
             </ul>
+            <Outlet />
 
-            <Routes>
+            {/* <Routes>
                 <Route path='contacts' element={<p>Our contact</p>} />
                 <Route path='team' element={<p>Our team</p>} />
-            </Routes>
+            </Routes> */}
         </div>
 
     )
